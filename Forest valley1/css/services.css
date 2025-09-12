@@ -1,0 +1,101 @@
+/* ===========================
+   Services Hero Section
+=========================== */
+.services-hero {
+  background: linear-gradient(135deg, #0a0f29, #10316b);
+  color: #fff;
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.services-hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #00f5ff; /* cyan accent */
+}
+
+.services-hero .highlight {
+  color: #ffc107; /* golden accent */
+}
+
+.services-hero p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #d1d1d1;
+  line-height: 1.8;
+}
+
+/* ===========================
+   Services Section
+=========================== */
+.services {
+  background: #0f1325;
+  padding: 80px 20px;
+  color: #fff;
+}
+
+.services h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #ffc107;
+}
+
+/* Grid Layout for Cards */
+.services .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+}
+
+/* Service Card */
+.service-card {
+  background: #1e2238;
+  border-radius: 15px;
+  padding: 30px 25px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(255, 193, 7, 0.25);
+}
+
+/* Icon Styling */
+.icon-wrapper {
+  font-size: 2.5rem;
+  color: #ffc107;
+  margin-bottom: 15px;
+}
+
+/* Title */
+.service-card h3 {
+  color: #00f5ff;
+  margin-bottom: 12px;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+/* Description */
+.service-card p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #bdbdbd;
+  margin-bottom: 15px;
+}
+
+/* Price Tag */
+.price {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #ffc107;
+  margin-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding-top: 10px;
+}

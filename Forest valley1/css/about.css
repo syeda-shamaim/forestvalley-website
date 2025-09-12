@@ -1,0 +1,488 @@
+/* ===========================
+   About Hero Section
+=========================== */
+.about-hero {
+  background: linear-gradient(135deg, #0a0f29, #10316b); /* same as services hero */
+  color: #fff;
+  text-align: center;
+  padding: 120px 20px;
+}
+.about-hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #00f5ff; /* cyan accent */
+}
+.about-hero .highlight {
+  color: #ffc107; /* golden accent */
+}
+.about-hero p {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #d1d1d1;
+  line-height: 1.8;
+}
+
+/* ===========================
+   About Details Section
+=========================== */
+.about-details {
+  background: #0f1325; /* same as services */
+  padding: 80px 20px;
+  color: #fff;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.about-card {
+  background: #1e2238;
+  border-radius: 15px;
+  padding: 30px;
+  text-align: left;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.35);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(255, 193, 7, 0.25); /* golden glow */
+}
+
+.about-card h3 {
+  color: #00f5ff; /* cyan heading */
+  margin-bottom: 12px;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.about-card p,
+.about-card ul {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #bdbdbd;
+}
+
+/* ===========================
+   CTA Section
+=========================== */
+.cta {
+  background: linear-gradient(135deg, #0a0f29, #10316b);
+  text-align: center;
+  padding: 80px 20px;
+  color: #fff;
+}
+
+.cta h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #00f5ff;
+}
+
+.cta .highlight {
+  color: #ffc107;
+}
+
+.cta p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #d1d1d1;
+  line-height: 1.8;
+}
+
+.cta .btn-ai {
+  font-size: 1rem;
+  padding: 12px 28px;
+  background: #00f5ff;
+  border: none;
+  border-radius: 8px;
+  color: #0f1325;
+  font-weight: 600;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.cta .btn-ai:hover {
+  background: #00c4cc;
+  transform: translateY(-3px);
+}
+
+
+/* homage page cta */
+/* CTA Section */
+.cta-section {
+  position: relative;
+  padding: 100px 20px;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+  background: url('https://picsum.photos/1600/900?blur=2') center/cover no-repeat;
+}
+
+/* Dark overlay */
+.cta-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(16,49,107,0.85);
+  z-index: 1;
+}
+
+/* Text content */
+.cta-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  margin: 0 auto;
+  animation: fadeInUp 1s ease;
+}
+
+.cta-content h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+.cta-content h2 span {
+  color: #f44336; /* red accent */
+}
+
+.cta-content p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  color: #f0f0f0;
+}
+
+/* Button */
+.cta-btn {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 30px;
+  background: #58c6ca ;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  transition: all 0.3s ease, box-shadow 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Glow Effect on Hover */
+.cta-btn:hover {
+  background:#55b5b8 ;
+  transform: scale(1.07);
+  box-shadow: #58c6ca;
+}
+
+/* Extra glowing animation */
+.cta-btn::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background:radial-gradient(circle, rgba(255,255,255,0.25) 0%, transparent 60%);
+  transform: scale(0);
+  opacity: 0;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+.cta-btn:hover::after {
+  transform: scale(1);
+  opacity: 1;
+}
+
+
+/* Quote Slider */
+.cta-slider {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  font-size: 1rem;
+  font-style: italic;
+  color: #ffebee;
+  animation: fadeIn 1s ease;
+}
+
+.quote {
+  display: none;
+}
+
+.quote.active {
+  display: block;
+  animation: fadeInOut 6s infinite;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  70% { opacity: 1; }
+  100% { opacity: 0; }
+}
+/* Section */
+.combo-section {
+  background: linear-gradient(135deg, #0a0f29, #10316b);
+  color: #fff;
+  padding: 100px 20px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Header */
+.combo-header h2 {
+  font-size: 2.6rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.combo-header h2 span {
+  color: #f44336; /* your red accent */
+}
+
+.combo-header p {
+  font-size: 1.1rem;
+  margin-bottom: 50px;
+  color: #ccc;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Card Container */
+.combo-card-container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Combo Card */
+.combo-card {
+  background: #d6d5d5; /* light gray */
+  color: #0a0f29;      /* dark text */
+  border-radius: 15px;
+  padding: 50px 40px;   /* spacious padding */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+}
+
+/* Top Info + Price */
+.combo-top {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+  text-align: left;
+}
+
+.combo-info h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #555;
+}
+
+.combo-info h1 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin: 10px 0;
+  color: #0a0f29; /* dark title for contrast */
+}
+
+.order-btn {
+  display: inline-block;
+  padding: 12px 28px;
+  margin-top: 15px;
+  border-radius: 30px;
+  background: #7ad7da; /* your teal button */
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.order-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(16, 49, 107, 0.7);
+}
+
+/* Price */
+.combo-price p {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.combo-price h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #0a0f29;
+}
+
+.combo-price h2 span {
+  color: #f44336;
+  font-size: 2.5rem;
+}
+
+.combo-price del {
+  font-size: 1rem;
+  color: #888;
+  margin-left: 8px;
+}
+
+/* Services Columns */
+.combo-services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  text-align: left;
+}
+
+.service-column h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #f44336; /* red headings */
+}
+
+.service-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.service-column ul li {
+  font-size: 0.95rem;
+  padding: 6px 0;
+  border-bottom: 1px dashed #ddd;
+}
+
+.service-column ul li:last-child {
+  border-bottom: none;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .combo-top {
+    flex-direction: column;
+    gap: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .combo-card {
+    padding: 40px 20px;
+  }
+}
+
+.contact-section {
+  padding: 80px 20px;
+  background: #fff;
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+  align-items: center;
+}
+
+.contact-info {
+  background: linear-gradient(135deg, #0a0f29, #10316b);
+  color: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  text-align: left;
+}
+
+.contact-info h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.contact-info p {
+  color: #ccc;
+  margin-bottom: 20px;
+}
+
+.contact-info h3 {
+  margin: 10px 0;
+  font-weight: 600;
+}
+
+.contact-form h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #0a0f29;
+}
+
+.contact-form p {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  max-width: 450px;
+}
+
+.contact-form input {
+  padding: 10px 14px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 30px;
+  outline: none;
+  font-size: 0.95rem;
+  transition: 0.3s;
+}
+
+.contact-form input:focus {
+  border-color: #10316b;
+  box-shadow: 0 0 10px rgba(16, 49, 107, 0.3);
+}
+
+.contact-form small {
+  color: #777;
+  margin-bottom: 20px;
+  font-size: 0.85rem;
+}
+
+.send-btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 30px;
+  background: #7ad7da;
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.send-btn:hover {
+  box-shadow: #7ad7da;
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+}

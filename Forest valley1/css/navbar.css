@@ -1,0 +1,185 @@
+/* ---------------- Navbar Base ---------------- */
+.navbar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 12000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 30px;
+  background: #061627; /* dark blue */
+  font-family: "Poppins", Arial, sans-serif;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.logo img{
+width: 80px; 
+  display: block; 
+ }  
+
+/* Desktop links */
+.nav-links {
+  display: flex;
+  gap: 22px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.nav-links li {
+  position: relative;
+}
+.nav-links a {
+  color: #00f5ff;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 8px 6px;
+  transition: all 0.3s ease;
+}
+.nav-links a:hover {
+  color: #ffffff;
+}
+.nav-links a.active {
+  color: #ff2d2d;
+}
+
+/* Dropdown menu */
+.nav-links li ul.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #061627;
+  min-width: 180px;
+  border-radius: 8px;
+  padding: 10px 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  z-index: 110;
+}
+.nav-links li:hover > ul.dropdown {
+  display: block;
+}
+.nav-links li ul.dropdown li {
+  padding: 0;
+}
+.nav-links li ul.dropdown a {
+  display: block;
+  padding: 10px 20px;
+  font-weight: 500;
+}
+.nav-links li ul.dropdown a:hover {
+  background: #00f5ff;
+  color: #061627;
+  border-radius: 6px;
+}
+
+/* Navbar actions */
+.navbar-actions {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+.phone-link {
+  color: #00f5ff;
+  font-weight: 700;
+  text-decoration: none;
+}
+.btn-ai {
+  background: #00f5ff;
+  color: #061627;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.btn-ai:hover {
+  transform: scale(1.05);
+  color: #061627;
+}
+
+/* ---------------- Hamburger ---------------- */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+}
+.hamburger span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background: #00f5ff;
+  margin: 5px 0;
+  transition: all 0.4s ease;
+  transform-origin: center;
+}
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translateY(7px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-7px);
+}
+
+/* ---------------- Sidebar (Mobile) ---------------- */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -270px;
+  width: 270px;
+  height: 100vh;
+  background: #061627;
+  padding: 80px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  transition: right 0.35s ease;
+  z-index: 11999;
+}
+.sidebar.open {
+  right: 0;
+}
+.sidebar a {
+  color: #00f5ff;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 12px 10px;
+  border-radius: 6px;
+  display: block;
+}
+.sidebar a:hover {
+  background: #00f5ff;
+  color: #061627;
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+  z-index: 11990;
+}
+.overlay.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ---------------- Responsive ---------------- */
+@media (max-width: 991px) {
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+}
+@media (min-width: 992px) {
+  .sidebar, .overlay { display: none; }
+}

@@ -1,0 +1,314 @@
+
+/* Contact Hero Section */
+.contact-hero {
+    padding: 80px 20px 60px 20px;
+    background: linear-gradient(135deg, #0a0f29, #10316b);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+}
+
+.contact-hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.contact-hero .highlight {
+    color: #ffc107;
+    font-weight: 800;
+}
+
+.contact-hero p {
+    font-size: 1.1rem;
+    color: #e6e2e2;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+/* Floating Background Shapes */
+.contact-hero::before,
+.contact-hero::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+    animation: float 6s infinite ease-in-out;
+}
+
+.contact-hero::before {
+    width: 180px;
+    height: 180px;
+    top: -40px;
+    left: -60px;
+}
+
+.contact-hero::after {
+    width: 250px;
+    height: 250px;
+    bottom: -80px;
+    right: -60px;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+.contact-section {
+  display: flex;
+  align-items: center;         /* vertical centering */
+  justify-content: center;     /* horizontal centering */
+  padding: 40px 20px;
+  min-height: 60vh;            /* adjust if you want taller/shorter */
+  box-sizing: border-box;
+  background:linear-gradient(135deg, #0a0f29, #10316b);         /* page background behind the box */
+}
+
+/* ensure the .container inside can act as a flex child and expand nicely */
+.contact-section > .container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* allow container to expand to fill min-height of parent */
+  min-height: inherit;
+  box-sizing: border-box;
+}
+
+/* The centered card */
+.contact-box {
+  width: 100%;
+  max-width: 640px;            /* controls box width */
+  margin: 0 auto;
+  padding: 35px;
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  animation: fadeInUp 0.7s ease both;
+  box-sizing: border-box;
+}
+
+/* inner text alignment - change to left if you want fields left-aligned */
+.contact-box { text-align: left; }
+
+/* form elements */
+.contact-box input,
+.contact-box textarea {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 14px;
+  border: 1px solid #e3e7ee;
+  border-radius: 10px;
+  background: #fafafa;
+  transition: box-shadow .25s, border-color .25s;
+}
+
+.contact-box input:focus,
+.contact-box textarea:focus {
+  outline: none;
+  border-color: #10316b;
+  box-shadow: 0 6px 18px rgba(16,49,107,0.12);
+}
+
+/* button */
+.contact-box button {
+  width: 100%;
+  padding: 13px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(135deg,#e60023,#ff4d6d);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* entrance animation */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive tweaks */
+@media (max-width: 992px) {
+  .contact-section { min-height: 55vh; padding: 36px 18px; }
+  .contact-box    { max-width: 520px; padding: 30px; }
+}
+
+@media (max-width: 600px) {
+  .contact-section { min-height: auto; padding: 28px 14px; }
+  .contact-box    { width: 100%; padding: 22px; border-radius: 12px; }
+}
+
+
+.contact-box input,
+.contact-box textarea {
+    width: 100%;
+    padding: 14px 18px;
+    margin-bottom: 18px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    background: #fafafa;
+}
+
+.contact-box input:focus,
+.contact-box textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+    outline: none;
+    background: #fff;
+}
+
+.contact-box textarea {
+    min-height: 120px;
+    resize: none;
+}
+
+/* Submit Button */
+.contact-box button {
+    width: 100%;
+    padding: 14px;
+    background: #7bdfe2;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-box button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.25);
+    transition: left 0.4s;
+}
+
+.contact-box button:hover::after {
+    left: 100%;
+}
+
+.contact-box button:hover {
+    box-shadow: #00f5ff;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .contact-hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .contact-hero p {
+        font-size: 1rem;
+    }
+
+    .contact-box {
+        padding: 25px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .contact-hero {
+        padding: 60px 15px 40px 15px;
+    }
+
+    .contact-hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .contact-box {
+        padding: 20px;
+    }
+}
+
+/* Navbar */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 30px;
+  background: #061627;
+}
+
+.btn-ai { background: #00f5ff; color: #061627; }
+
+/* Hamburger (mobile) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+.hamburger span {
+  height: 3px;
+  width: 28px;
+  background: #00f5ff;
+  margin: 4px 0;
+  transition: 0.3s;
+}
+.hamburger.active span:nth-child(1) { transform: rotate(45deg) translateY(7px); }
+.hamburger.active span:nth-child(2) { opacity: 0; }
+.hamburger.active span:nth-child(3) { transform: rotate(-45deg) translateY(-7px); }
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0; right: -260px;
+  width: 260px; height: 100vh;
+  background: #061627;
+  padding: 80px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  transition: 0.3s;
+  z-index: 9999;
+}
+.sidebar.open { right: 0; }
+.sidebar a { color: #00f5ff; text-decoration: none; padding: 10px; }
+
+/* Overlay */
+.overlay {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.5);
+  opacity: 0; pointer-events: none;
+  transition: 0.3s;
+  z-index: 9998;
+}
+.overlay.visible { opacity: 1; pointer-events: auto; }
+
+/* Responsive */
+@media (max-width: 991px) {
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+}
+@media (min-width: 992px) {
+  .sidebar, .overlay { display: none; }
+}
+
+.success-msg {
+    color: green;
+    margin-bottom: 15px;
+    font-weight: bold;
+}

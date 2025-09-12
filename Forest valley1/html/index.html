@@ -1,0 +1,646 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Forest Valley - AI Solutions</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/navbar.css">
+  <link rel="stylesheet" href="../css/about.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Body & Paragraphs -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Headings -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- Buttons / UI Elements -->
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Desktop Navbar -->
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index.html"><img src="../assets/Forest Valley Without Background.png" alt="Logo"></a>
+    </div>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <div class="navbar-actions">
+      <a href="tel:+123456789" class="phone-link">📞 +123 456 789</a>
+      <a href="contact.html" class="btn-ai">AI Assistant</a>
+      <button id="hamburger" class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="ai.html">AI Assistant</a></li>
+      <li><a href="tel:+123456789">📞 +123 456 789</a></li>
+    </ul>
+  </div>
+  <div class="overlay" id="overlay"></div>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="hero-content">
+      <h1>Affordable <span class="highlight">AI Solutions</span></h1>
+      <h2>Custom Apps, MLOps & Data Engineering</h2>
+      <p>Forest Valley delivers production-ready AI apps, tools, and websites in just <b>24 hours</b>.</p>
+      <div class="hero-buttons">
+        <a href="services.html" class="btn-ai">Get Started</a>
+        <a href="portfolio.html" class="btn-ai">View Portfolio</a>
+      </div>
+    </div>
+    <div class="badge-card">
+      <div class="discount-badge">🔥 50% OFF</div>
+      <h3>Let’s Build Your AI Future</h3>
+      <form id="quoteForm" action="contact.html" method="get">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="text" name="phone" placeholder="Phone Number" required>
+        <textarea name="details" placeholder="Project Details" rows="3"></textarea>
+        <button type="submit" class="btn">Get Free Quote</button>
+      </form>
+    </div>
+  </section>
+
+
+  <section id="simple-services" class="simple-services py-5 bg-light">
+    <div class="container text-center">
+      <h2 class="mb-4 fw-bold" style="color:#ff2d2d;">Our Services</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="simple-card p-4 h-100 shadow-sm">
+            <i class="bi bi-cpu fs-1 text-primary"></i>
+            <h5 class="mt-3">Custom AI Apps</h5>
+            <p>We design and deploy AI apps tailored for your business goals.</p>
+            <a href="services.html#ai-apps" class="stretched-link"></a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="simple-card p-4 h-100 shadow-sm">
+            <i class="bi bi-globe2 fs-1 text-success"></i>
+            <h5 class="mt-3">Web Development</h5>
+            <p>Modern, responsive websites optimized for speed and conversions.</p>
+            <a href="services.html#web-development" class="stretched-link"></a>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="simple-card p-4 h-100 shadow-sm">
+            <i class="bi bi-graph-up-arrow fs-1 text-danger"></i>
+            <h5 class="mt-3">MLOps & Data</h5>
+            <p>Evaluation dashboards, monitoring, and scalable ML infrastructure.</p>
+            <a href="services.html#mlops" class="stretched-link"></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hire Section -->
+  <section id="hire" class="hire-section">
+    <div class="hire-text">
+      <h2>Why Should You Hire <span class="highlight">Forest Valley?</span></h2>
+      <p>
+        In today’s digital age, your website is your first impression. With 82% of people searching online
+        before making decisions, having a powerful online presence is not optional—it’s essential.
+      </p>
+      <p>
+        Our team builds modern, responsive, and SEO-friendly websites that represent your brand, load fast,
+        and keep users engaged. We design experiences, not just websites.
+      </p>
+      <a href="contact.html" class="btn-ai">Get Started</a>
+    </div>
+
+    <div class="hire-box">
+      <div class="flip-card">
+        <div class="flip-card-inner" id="flipCard">
+          <!-- Front -->
+          <div class="flip-card-front">
+            <h3 id="service-title">Logo Design</h3>
+            <p id="service-text">
+              We create unique, memorable logos tailored to your brand with smart color choices and precision detail.
+            </p>
+          </div>
+
+          <!-- Back -->
+          <div class="flip-card-back">
+            <h3 id="service-title-back">Web Development</h3>
+            <p id="service-text-back">
+              We create fast, responsive, and modern websites that deliver a great user experience.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trusted Brands -->
+  <section class="brands">
+    <div class="brands-track">
+      <!-- Repeat logos 2 times for smooth loop -->
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google">
+
+      <!-- repeat again for loop -->
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google">
+    </div>
+  </section>
+
+  <section class="services">
+    <h2>What’s Included in Our <span>Forest Valley Services?</span></h2>
+    <div class="services-grid">
+
+      <div class="service-card">
+        <img src="https://img.icons8.com/color/96/forest.png" alt="Forest Icon">
+        <h3>Eco Web Design</h3>
+        <p>Leave your website’s frontend and backend in good hands. We design with a nature-inspired touch, ensuring
+          harmony between visuals and usability.</p>
+      </div>
+
+      <div class="service-card">
+        <img src="https://img.icons8.com/color/96/shopping-cart.png" alt="Ecommerce Icon">
+        <h3>Eco E-Commerce</h3>
+        <p>We create seamless digital stores that sell with nature in mind, offering sustainable shopping experiences.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <img src="https://img.icons8.com/color/96/wordpress.png" alt="WordPress Icon">
+        <h3>WordPress Experts</h3>
+        <p>From scratch or migration, our eco-friendly WordPress development helps you grow while being mindful of the
+          environment.</p>
+      </div>
+
+      <div class="service-card">
+        <img src="https://img.icons8.com/color/96/shopify.png" alt="Shopify Icon">
+        <h3>Shopify Design</h3>
+        <p>We bring Shopify power to your forest-inspired store with custom eco-friendly solutions that boost revenue.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <img src="https://img.icons8.com/color/96/seo.png" alt="SEO Icon">
+        <h3>Search Engine Optimization</h3>
+        <p>We optimize for both search engines and users, growing your digital forest presence naturally and
+          organically.
+        </p>
+      </div>
+
+      <div class="service-card">
+        <img src="https://img.icons8.com/color/96/content.png" alt="Content Icon">
+        <h3>Content Writing</h3>
+        <p>Compelling eco-focused content that communicates your message, grows your reach, and converts visitors.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="wave-section">
+    <!-- Content -->
+    <div class="content">
+      <h2>
+        Create a Long-Term Relationship <br />
+        <span>With Our Results-Driven, Efficient Team</span>
+        That Trusts in Conversion
+      </h2>
+
+      <p>
+        We are more than just your typical business that thinks in one-time miracles.
+        Our experts work hard and go above and beyond to constantly provide the greatest outcomes.
+        WebWolfs works hard to build enduring relationships with our clients rather than just providing one-time
+        services.
+      </p>
+    </div>
+
+    <!-- Wave Bottom -->
+    <div class="wave-bottom">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
+        <path fill="#ffffff" fill-opacity="1"
+          d="M0,96L48,117.3C96,139,192,181,288,202.7C384,224,480,224,576,192C672,160,768,96,864,96C960,96,1056,160,1152,197.3C1248,235,1344,245,1392,250.7L1440,256L1440,320L0,320Z">
+        </path>
+      </svg>
+    </div>
+  </section>
+
+  <section class="portfolio-section">
+    <div class="portfolio-header">
+      <h2>OUR <span>PORTFOLIO WORK</span></h2>
+      <p>
+        Don’t just believe in our words. Go through our portfolio to build your trust in us.
+        It just takes a moment but might help in getting started!
+      </p>
+    </div>
+
+    <div class="portfolio-grid">
+      <!-- Portfolio Item -->
+      <div class="portfolio-card">
+        <img src="../assets/port2.jpeg" alt="Ad Campaign">
+        <div class="overlay">
+          <a href="portfolio.html#project1" class="plus">+</a>
+        </div>
+      </div>
+
+      <div class="portfolio-card">
+        <img src="../assets/port3.jpeg" alt="Web Development">
+        <div class="overlay">
+          <a href="portfolio.html#project2" class="plus">+</a>
+        </div>
+      </div>
+
+      <div class="portfolio-card">
+        <img src="../assets/port4.jpeg" alt="Brand Identity">
+        <div class="overlay">
+          <a href="portfolio.html#project3" class="plus">+</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section class="pricing-section">
+    <div class="pricing-intro">
+      <h2 class="section-title">Our Website Design Package</h2>
+      <p class="section-subtext">
+        WebWolfs offer a variety of website design packages that are clutter-free and custom web design
+        services that reflect company identity, widening the window for connecting with clients online.
+        Our expertise is in creating user-friendly, responsive websites that increase conversion rates
+        and attract targeted traffic.
+      </p>
+    </div>
+    <div class="cards-container">
+      <!-- Basic -->
+      <div class="card">
+        <h3>Basic</h3>
+        <div class="price">$49</div>
+        <ul>
+          <li>1 Page Website</li>
+          <li>Basic Design</li>
+          <li>Email Support</li>
+          <li>Mobile Responsive</li>
+          <li>48 to 72 hours TAT</li>
+          <li>Complete Deployment</li>
+          <li>100% Satisfaction Guarantee</li>
+        </ul>
+        <a href="contact.html?plan=basic" class="btn">Choose Plan</a>
+      </div>
+
+      <!-- Startup -->
+      <div class="card">
+        <h3>Startup</h3>
+        <div class="price">$99</div>
+        <ul>
+          <li>5 Pages Website</li>
+          <li>Custom Design</li>
+          <li>5 Premium Stock Images</li>
+          <li>Banner Design</li>
+          <li>Social Media Integration</li>
+          <li>Contact/Query Form</li>
+          <li>Complete W3C Certified HTML</li>
+          <li>Mobile Responsive</li>
+          <li>100% Ownership Rights</li>
+        </ul>
+        <a href="contact.html?plan=startup" class="btn">Choose Plan</a>
+      </div>
+
+      <!-- Premium -->
+      <div class="card">
+        <h3>Premium</h3>
+        <div class="price">$199</div>
+        <ul>
+          <li>10 Pages Website</li>
+          <li>Advanced Custom Design</li>
+          <li>15 Premium Stock Images</li>
+          <li>Social Media Integration</li>
+          <li>Custom Forms</li>
+          <li>CMS / Admin Panel Support</li>
+          <li>Mobile Responsive</li>
+          <li>SEO Optimized</li>
+          <li>100% Satisfaction Guarantee</li>
+        </ul>
+        <a href="contact.html?plan=premium" class="btn">Choose Plan</a>
+      </div>
+
+      <!-- Professional -->
+      <div class="card">
+        <h3>Professional</h3>
+        <div class="price">$299</div>
+        <ul>
+          <li>15 Pages Website</li>
+          <li>Custom Animations</li>
+          <li>Striking Hover Effects</li>
+          <li>Lead Capturing Forms</li>
+          <li>Online Reservation/Appointment Tool</li>
+          <li>SEO + Analytics</li>
+          <li>Priority Support</li>
+          <li>100% Unique Design Guarantee</li>
+        </ul>
+        <a href="contact.html?plan=professional" class="btn">Choose Plan</a>
+      </div>
+
+      <!-- Business -->
+      <div class="card">
+        <h3>Business</h3>
+        <div class="price">$499</div>
+        <ul>
+          <li>25 Pages Website</li>
+          <li>eCommerce Features</li>
+          <li>Marketing Tools</li>
+          <li>Custom Forms</li>
+          <li>FREE Google Friendly Sitemap</li>
+          <li>Dedicated Account Manager</li>
+          <li>100% Money Back Guarantee*</li>
+        </ul>
+        <a href="contact.html?plan=business" class="btn">Choose Plan</a>
+      </div>
+
+      <!-- Corporate -->
+      <div class="card">
+        <h3>Corporate</h3>
+        <div class="price">$999</div>
+        <ul>
+          <li>Unlimited Pages</li>
+          <li>Enterprise Solutions</li>
+          <li>Custom Integrations</li>
+          <li>24/7 Dedicated Support</li>
+          <li>Advanced Security Features</li>
+          <li>100% Ownership Rights</li>
+          <li>100% Satisfaction Guarantee</li>
+        </ul>
+        <a href="contact.html?plan=corporate" class="btn">Choose Plan</a>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="cta-overlay"></div>
+
+    <div class="cta-content">
+      <h2>
+        We Are The <span>Hybrid of Creativity, Innovation, Hard Work</span> And Dedication
+      </h2>
+      <p>
+        Contact Us Now To Get The Best Services At The Best Prices.<br>
+        <strong>Get Free Project Estimation</strong> – It only takes a moment!
+      </p>
+      <a href="contact.html" class="cta-btn">Get Free Project Estimation</a>
+    </div>
+
+    <!-- Background slider with quotes -->
+    <div class="cta-slider">
+      <div class="quote active">“Design is intelligence made visible.”</div>
+      <div class="quote">“Your vision, our innovation.”</div>
+      <div class="quote">“Turning ideas into reality.”</div>
+      <div class="quote">“Work hard. Dream big.”</div>
+    </div>
+  </section>
+
+  <section class="combo-section">
+    <div class="combo-card-container">
+      <!-- Header -->
+      <div class="combo-header">
+        <h2>ALL IN ONE <span>COMBO</span></h2>
+        <p>Our services are suitable for potential super-startups and brands to revamp for company</p>
+      </div>
+
+      <!-- Combo Card -->
+      <div class="combo-card">
+        <!-- Top Info + Price -->
+        <div class="combo-top">
+          <div class="combo-info">
+            <h3>Forest Valley</h3>
+            <h1>COMBO PACKAGES</h1>
+            <a href="contact.html?order=combo" class="order-btn">Order Now →</a>
+          </div>
+          <div class="combo-price">
+            <p>03 Months Installments</p>
+            <h2><span>$2999</span> <del>$5000</del> ONLY</h2>
+          </div>
+        </div>
+
+        <!-- Services Columns -->
+        <div class="combo-services">
+          <div class="service-column">
+            <h4>LOGO DESIGN SERVICES</h4>
+            <ul>
+              <li>5 Custom Logo Design Concepts</li>
+              <li>Dedicated Designer Team</li>
+              <li>Icon Design</li>
+              <li>File Formats (PSD, PDF, AI, JPEG, PNG)</li>
+            </ul>
+          </div>
+
+          <div class="service-column">
+            <h4>WEBSITE SERVICES</h4>
+            <ul>
+              <li>10 Pages Website Design</li>
+              <li>CMS / Admin Panel</li>
+              <li>Mobile Responsive</li>
+              <li>Team of Expert Web Designer & Developer</li>
+              <li>8 Stock Images</li>
+            </ul>
+          </div>
+
+          <div class="service-column">
+            <h4>SOCIAL MEDIA SERVICES</h4>
+            <ul>
+              <li>Facebook Page Design</li>
+              <li>Twitter Page Design</li>
+              <li>YouTube Page Design</li>
+              <li>Instagram Page Design</li>
+              <li>All Final File Formats</li>
+            </ul>
+          </div>
+
+          <div class="service-column">
+            <h4>VALUE-ADDED SERVICES</h4>
+            <ul>
+              <li>All Final File Formats</li>
+              <li>Dedicated Account Manager</li>
+              <li>100% Ownership Rights</li>
+              <li>100% Satisfaction Guarantee</li>
+              <li>100% Money-Back Guarantee</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="contact-section">
+    <div class="contact-container">
+
+      <!-- Left Box -->
+      <div class="contact-info">
+        <h2>Let's Get the Ball Rolling</h2>
+        <p>Ask us anything, we have the friendliest customer service folks</p>
+        <h3>+1(213) 301-0157</h3>
+        <h3>support@forestvalley.com</h3>
+        <a href="contact.html" class="chat-btn">CHAT NOW TO AVAIL THIS OFFER</a>
+      </div>
+
+      <!-- Right Box -->
+      <div class="contact-form">
+        <h2>Let’s Get Started!</h2>
+        <p>Contact us by using the form below or send us an email.</p>
+        <div id="success-msg" style="color:green; display:none;">Form submitted successfully!</div>
+        <form action="../backend/contact1.php" method="post">
+          <input type="text" name="name" placeholder="Enter Your Name" required>
+          <input type="email" name="email" placeholder="Email Address" required>
+          <input type="tel" name="phone" placeholder="Phone Number" required>
+          <small>**Reply with STOP If you would like to stop receiving promotional messages.</small>
+          <button type="submit" class="send-btn">Send Now →</button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="map-section">
+    <div class="content">
+      <h1>Growing Businesses Since 2016</h1>
+      <p>Made with in 25 cities around the world</p>
+
+      <!-- Curved SVG Lines -->
+      <div class="connections">
+        <svg viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice">
+          <path d="M200,400 C400,200 800,200 1000,400" />
+          <path d="M300,300 C500,100 700,100 900,300" />
+          <path d="M250,450 C600,250 900,250 1100,450" />
+        </svg>
+      </div>
+
+      <!-- Cities -->
+      <div class="cities">
+        <span>Arlington</span>
+        <span>Atlanta</span>
+        <span>Austin</span>
+        <span>Baltimore</span>
+        <span>Chicago</span>
+        <span>Cleveland</span>
+        <span>Dallas</span>
+        <span>Denver</span>
+        <span>Houston</span>
+        <span>Jacksonville</span>
+        <span>Kansas City</span>
+        <span>Las Vegas</span>
+        <span>Los Angeles</span>
+        <span>Louisville</span>
+        <span>New York City</span>
+        <span>Miami</span>
+        <span>Minneapolis</span>
+        <span>Phoenix</span>
+        <span>New Orleans</span>
+        <span>Orlando</span>
+        <span>Philadelphia</span>
+        <span>Portland</span>
+        <span>San Antonio</span>
+        <span>San Diego</span>
+        <span>Seattle</span>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <!-- Brand/About -->
+      <div class="footer-col">
+        <h3 class="footer-logo">🤖 Forest Valley</h3>
+        <p>
+          Forest Valley is a creative digital agency specializing in
+          modern web design, development, SEO, and branding.
+          We craft experiences that help businesses grow.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <p>📍 123 Creative Street, NY, USA</p>
+        <p>📞 +1 234 567 890</p>
+        <p>✉️ info@forestvalley.com</p>
+      </div>
+
+      <!-- Social -->
+      <div class="footer-col">
+        <h4>Follow Us</h4>
+        <div class="social-links">
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-twitter"></i></a>
+          <a href="#"><i class="bi bi-linkedin"></i></a>
+          <a href="#"><i class="bi bi-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom">
+      <p>&copy; 2025 Forest Valley. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../javascript/script.js"></script>
+
+  <script>
+    //Mobile sidebar toggle (keeps your existing styles/patterns)
+    const hamburger = document.getElementById("hamburger");
+    const sidebar = document.getElementById("sidebar");
+    const overlay = document.getElementById("overlay");
+
+    hamburger.addEventListener("click", () => {
+      sidebar.classList.toggle("show");
+      overlay.classList.toggle("show");
+    });
+
+    overlay.addEventListener("click", () => {
+      sidebar.classList.remove("show");
+      overlay.classList.remove("show");
+    });
+  </script>
+</body>
+
+</html>
