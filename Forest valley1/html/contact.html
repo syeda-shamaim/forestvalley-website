@@ -14,8 +14,9 @@
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="stylesheet" href="../css/contact.css" />
   <link rel="stylesheet" href="../css/about.css" />
-  <link rel="stylesheet" href="../css/services.css" />  
+  <link rel="stylesheet" href="../css/services.css" />
 </head>
+
 <body>
   <!-- Desktop Navbar -->
   <nav class="navbar">
@@ -28,7 +29,7 @@
       <li><a href="about.html">About</a></li>
       <li><a href="services.html">Services</a></li>
       <li><a href="portfolio.html">Portfolio</a></li>
-      <li><a href="contact.html"class="active">Contact</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
     </ul>
 
     <div class="navbar-actions">
@@ -49,7 +50,7 @@
       <li><a href="about.html">About</a></li>
       <li><a href="services.html">Services</a></li>
       <li><a href="portfolio.html">Portfolio</a></li>
-      <li><a href="contact.html"class="active">Contact</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
       <li><a href="ai.html">AI Assistant</a></li>
       <li><a href="tel:+123456789">📞 +123 456 789</a></li>
     </ul>
@@ -66,24 +67,25 @@
       </p>
     </div>
   </section>
-<!-- ===== Contact Form Section ===== -->
-<section id="contact" class="contact-section">
-  <div class="container">
-    <div class="contact-box">
-      <p>Fill out the form below or email us directly.</p>
-<!-- Success Message -->
-<p id="success-msg" class="success-msg" style="display:none;">Form submitted successfully!</p>
+  <!-- ===== Contact Form Section ===== -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <div class="contact-box">
+        <p>Fill out the form below or email us directly.</p>
+        <!-- Success Message -->
+        <p id="success-msg" class="success-msg" style="display:none;">Form submitted successfully!</p>
 
-      <form action="../backend/contact2.php" method="post">
-        <input type="text" name="name" placeholder="Enter Your Name" required>
-        <input type="email" name="email" placeholder="Email Address" required>
-        <input type="text" name="subject" placeholder="Subject" required>
-        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-        <button type="submit" class="send-btn">Send Now →</button>
-      </form>
+        <form action="../backend/contact2.php" method="post">
+          <input type="text" name="name" placeholder="Enter Your Name" required>
+          <input type="email" name="email" placeholder="Email Address" required>
+          <input type="text" name="phone" placeholder="Phone Number" required> <!-- ✅ Added -->
+          <input type="text" name="subject" placeholder="Subject" required>
+          <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+          <button type="submit" class="send-btn">Send Now →</button>
+        </form>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- Footer -->
   <footer class="footer">
